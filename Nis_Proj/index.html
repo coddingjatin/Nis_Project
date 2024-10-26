@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Registration Process</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <nav>
+        <div class="navbar">
+          <div class="logo"><a href="#">Registration Buddy</a></div>
+        </div>
+      </nav>
+
+  <div class="container">
+    <h1>College Registration Process</h1>
+    <div class="form-step active" id="step1">
+      <h3>Step 1: Registration Through ABC Website</h3>
+      <img src="images/step1.png" alt="Step 1">
+      <p>Visit on www.abc.gov.in</p>
+      <p>Click on My Account -> Select "Student"</p>
+      <p>You will directed to the DigiLocker - signin page
+      <div class="button-container">
+        <button onclick="nextStep()" class="next-button">Next</button>
+      </div>
+    </div>
+
+    <div class="form-step" id="step2">
+      <h3>Step 2: DigiLocker Login</h3>
+      <img src="images/step2.png" alt="Step 2">
+        <p>Sign in to your account using your registered mobile number </p>
+        <p>Enter the OTP recieved on your mobile number</p>
+        <p>Then Proceed</p>
+        <div class="button-container">
+        <button onclick="prevStep()" class="prev-button">Previous</button>
+        <button onclick="nextStep()" class="next-button">Next</button>
+      </div>
+    </div>
+
+    <div class="form-step" id="step3">
+      <h3>Step 3: Personal Information </h3>
+      <img src="images/step3.png" alt="Step 3">
+        <p>Click on Select Institution Type -> Select "University"</p>
+        <p>Select Institution Name -> Select <b>"COEP Technological University"</b></p>
+      <div class="button-container">
+        <button onclick="prevStep()" class="prev-button">Previous</button>
+        <button onclick="nextStep()" class="next-button">Next</button>
+      </div>
+    </div>
+
+    <div class="form-step" id="step4">
+      <h3>Step 4: ABC Registration Completed </h3>
+      <img src="images/step4.png" alt="d">
+        <p>Note Down your ABC ID</p>
+        <p>This ABC ID will Be Used For Futher Processes</p>
+      <div class="button-container">
+        <button onclick="prevStep()" class="prev-button">Previous</button>
+        <button onclick="nextStep()" class="next-button">Next</button>
+      </div>
+    </div>
+
+    <div class="form-step" id="step5">
+      <h3>Step 5: Fill Anti-Ragging Form</h3>
+      <img src="images/step5.png" alt="step5">
+        <p>Enter Your All the personal details</p>
+        <p>In University details <b>Enter University code as U-1257</b></p>
+        <p>In University details <b>Enter University Name : COEP Technological University</b></p>
+        <p>Fill All other Information</p>
+        <p><b>Submit the Form</b></p>
+        <p><b>After This Click On</b></p>
+      <div class="button-container">
+        <button onclick="prevStep()" class="prev-button">Previous</button>
+        <button onclick="openPaymentModal()" class="next-button">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePaymentModal()">&times;</span>
+      <h2>Payment Procedure</h2>
+      <img src="images\pay.png" alt="Payment Step">
+      <p>1.<b>Go to www.Sbicollect.com -> Select Educational Institutes</b></p>
+      <p>2. Search for COEP Technological University</p>
+      <p>3. Select payment category <b>FY 24-25 University Fees</b></p>
+      <p>4. Fill The Personal Information</p>
+      <p>5. Select The Payment Option And Your Complete the payment</p>
+      <p><b>Print the reciept from Account's team Printer</b></p>
+      <button onclick="completePayment()">Registration is Completed</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
